@@ -1,1 +1,0 @@
-Hello world and that is by Kamalov Quvomiddin and it is a MERN stack project 
