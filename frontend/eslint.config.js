@@ -21,6 +21,7 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       "@typescript-eslint/no-unused-vars": "off",
       "react-hooks/exhaustive-deps": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },

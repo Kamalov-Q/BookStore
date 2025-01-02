@@ -11,13 +11,11 @@ import DeleteBook from "./pages/Delete";
 const App = () => {
 
   const getData = async () => {
-    const response = await axios.get('http://localhost:5555/api/books');
-    console.log(response, "Response");
+    await axios.get('http://localhost:5555/api/books');
   }
 
   useEffect(() => {
     getData();
-    console.log("Working");
   }, [])
 
   return (

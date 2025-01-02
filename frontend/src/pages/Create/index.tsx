@@ -1,9 +1,9 @@
 import { FC, useState } from 'react'
-import BackButton from '../../components/Back/BackButton'
-import Spinner from '../../components/Spinner/Spinner'
+import BackButton from '../../components/back/BackButton'
+import Spinner from '../../components/spinner/Spinner'
 import { useNavigate } from 'react-router-dom'
 import { Base } from '../../config'
-
+import { useSnackbar } from 'notistack'
 
 const CreateBook: FC = () => {
     const [title, setTitle] = useState<string>('');
@@ -12,6 +12,7 @@ const CreateBook: FC = () => {
     const [description, setDescription] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
     const navigate = useNavigate();
+    const { enqueueSnackbar } = useSnackbar();
 
     const handleSaveBook = async () => {
         try {
@@ -22,12 +23,14 @@ const CreateBook: FC = () => {
                 publishYear,
                 description
             }
-            const response = await Base.api.post('/books', { ...data });
+            const response = await Base.api.post('/books', data);
+            enqueueSnackbar("Book Added Successfully", { variant: 'success' });
             navigate('/');
             console.log("Post Response", response?.data);
         }
         catch (err) {
             console.log(err);
+            enqueueSnackbar("Failed to add book", { variant: 'error' });
         }
         finally {
             setLoading(false);
