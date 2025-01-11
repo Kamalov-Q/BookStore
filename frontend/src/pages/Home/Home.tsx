@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 import { MdOutlineAddBox } from "react-icons/md"
 import { Book, ShowType } from "../../types/types"
 import { Base } from "../../config"
-import {Spinner} from "../../components/spinner/Spinner"
 import BooksTable from "../../components/home/BooksTable"
 import BooksCard from "../../components/home/BooksCard"
+import { Spinner } from "../../components/spinner/Spinner"
 
 const Home: FC = () => {
 
