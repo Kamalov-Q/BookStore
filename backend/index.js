@@ -1,5 +1,4 @@
 import express from "express";
-import { PORT, mongoDB_URL } from "./config.js";
 import mongoose from "mongoose";
 import booksRoute from "./routes/booksRoute.js";
 import cors from "cors";
@@ -22,12 +21,12 @@ app.use("/api/books", booksRoute);
 
 //Connecting to the DataBase
 mongoose
-  .connect(mongoDB_URL)
+  .connect(import.meta.env.mongoDB_URL)
   .then(() => {
     console.log("App is connected to MongoDB");
-    app.listen(PORT, () => {
-      console.log("App is running on port " + PORT);
-      console.log("App is running on http://localhost:" + PORT);
+    app.listen(import.meta.env.PORT, () => {
+      console.log("App is running on port " + import.meta.env.PORT);
+      console.log("App is running on http://localhost:" + import.meta.env.PORT);
     });
   })
   .catch((error) => console.log(error));
