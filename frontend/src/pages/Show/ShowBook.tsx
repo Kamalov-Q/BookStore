@@ -33,7 +33,7 @@ const ShowBook: FC = () => {
 
     return (
         <div className="p-4">
-            <BackButton />
+            <BackButton  destination="/"/>
             <h1 className="text-3xl my-4">
                 Show Book
             </h1>

@@ -38,7 +38,7 @@ const CreateBook: FC = () => {
     }
     return (
         <div className='p-4'>
-            <BackButton />
+            <BackButton destination='/' />
             <h1 className='text-3xl my-4'>Create Book</h1>
             {
                 loading && <Spinner />

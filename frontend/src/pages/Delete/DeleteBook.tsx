@@ -31,7 +31,7 @@ const DeleteBook: FC = () => {
 
     return (
         <div className="p-4">
-            <BackButton />
+            <BackButton destination="/"/>
             <h1 className="text-3xl my-4">Delete Book</h1>
             {loading && <Spinner />}
             <div className="flex flex-col items-center justify-center border-sky-400 rounded-xl w-[600px] p-8 mx-auto border-2">
