@@ -1,5 +1,3 @@
-import axios from "axios";
-import { useEffect } from "react"
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import CreateBook from "./pages/Create";
@@ -9,15 +7,6 @@ import DeleteBook from "./pages/Delete";
 
 
 const App = () => {
-
-  const getData = async () => {
-    await axios.get('http://localhost:5555/api/books');
-  }
-
-  useEffect(() => {
-    getData();
-  }, [])
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />

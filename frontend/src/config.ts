@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const Base = {
   api: axios.create({
-    baseURL: "http://localhost:5555/api",
+    baseURL: import.meta.env.VITE_REACT_APP_BACKEND_BASEURL,
     headers: {
       "Content-type": "application/json",
     },

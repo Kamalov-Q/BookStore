@@ -19,7 +19,7 @@ const Home: FC = () => {
       setLoading(true);
       const response = await Base.api.get('/books');
       setBooks(response?.data?.data);
-    }
+     }
     catch (err) {
       console.log(err);
     }
