@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react'
-import BackButton from '../../components/back/BackButton'
-import Spinner from '../../components/spinner/Spinner'
+import {BackButton} from '../../components/back/BackButton'
+import {Spinner} from '../../components/spinner/Spinner'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Base } from '../../config'
 import { useSnackbar } from 'notistack'

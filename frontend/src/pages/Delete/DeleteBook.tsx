@@ -1,8 +1,8 @@
 import { FC, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom";
 import { Base } from "../../config";
-import BackButton from "../../components/back/BackButton";
-import Spinner from "../../components/spinner/Spinner";
+import {BackButton} from "../../components/back/BackButton";
+import {Spinner} from "../../components/spinner/Spinner";
 import { useSnackbar } from "notistack";
 
 const DeleteBook: FC = () => {
